@@ -2,14 +2,13 @@
 export default {
   content: [
     "./app/**/*.{js,vue,ts}",
-    "./app/**/*.vue",
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
+    "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./app.vue",
-    "./error.vue",
-    "./**/*.vue"
+    "./error.vue"
   ],
   theme: {
     extend: {},
