@@ -14,38 +14,32 @@
         <div class="absolute bottom-20 left-1/3 w-40 h-40 bg-blue-400/15 rounded-full blur-3xl animate-pulse"></div>
       </div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <div class="mb-6">
-            <span class="inline-flex items-center px-6 py-3 rounded-full text-sm font-bold bg-white/20 backdrop-blur-sm text-white border border-white/30 shadow-lg">
-              🚀 Инновационные технологии
-            </span>
-          </div>
-          <h1 class="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
-            <span class="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Автоматизируйте
-            </span>
-            <br>
-            <span class="bg-gradient-to-r from-blue-100 to-purple-100 bg-clip-text text-transparent">
-              Масштабируйте
-            </span>
-            <br>
-            <span class="bg-gradient-to-r from-purple-100 to-pink-100 bg-clip-text text-transparent">
-              Создавайте
-            </span>
-          </h1>
-          <p class="text-xl lg:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            Экспертные услуги в области автоматизации, DevOps и веб-разработки для вашего бизнеса
-          </p>
-          <div class="flex flex-col sm:flex-row gap-6 justify-center">
-            <NuxtLink to="/contact" class="group relative px-10 py-5 bg-white text-blue-600 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20">
-              <span class="relative z-10">Начать проект</span>
-              <div class="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </NuxtLink>
-            <NuxtLink to="/services" class="px-10 py-5 border-2 border-white/30 text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:bg-white/10 hover:border-white/50 backdrop-blur-sm">
-              Узнать больше
-            </NuxtLink>
-          </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="mb-6">
+          <span class="inline-flex items-center px-6 py-3 rounded-full text-sm font-bold bg-white/20 backdrop-blur-sm text-white border border-white/30 shadow-lg">
+            🚀 Инновационные технологии
+          </span>
+        </div>
+        <h1 class="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
+          <span class="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            Автоматизируйте
+          </span>
+          <br>
+          <span class="bg-gradient-to-r from-blue-100 to-purple-100 bg-clip-text text-transparent">
+            и создавайте
+          </span>
+        </h1>
+        <p class="text-xl lg:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed font-light">
+          Экспертные услуги в области автоматизации, DevOps, веб-разработки, Big Data и искусственного интеллекта для вашего бизнеса
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <NuxtLink to="/contact" class="group relative px-8 py-4 bg-white text-blue-600 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20">
+            <span class="relative z-10">Начать проект</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </NuxtLink>
+          <NuxtLink to="/process" class="px-8 py-4 border-2 border-white/30 text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:bg-white/10 hover:border-white/50 backdrop-blur-sm">
+            Как мы работаем
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -58,7 +52,7 @@
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">Комплексные решения для цифрового бизнеса</p>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Automation Card -->
           <div class="group relative bg-white rounded-3xl p-8 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
             <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -127,6 +121,29 @@
               </div>
             </div>
           </div>
+
+          <!-- Big Data & AI Card -->
+          <div class="group relative bg-white rounded-3xl p-8 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Big Data & ИИ</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Анализируем большие данные, обучаем LLM модели и создаем BI системы 
+                для принятия data-driven решений.
+              </p>
+              <div class="flex items-center text-orange-600 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                <span>Узнать больше</span>
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
         
         <div class="text-center mt-16">
@@ -136,6 +153,123 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </NuxtLink>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Process Section -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Как мы работаем</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">Прозрачный и эффективный процесс от идеи до запуска</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+          <!-- Step 1: Analysis -->
+          <div class="group relative text-center">
+            <div class="relative mb-8">
+              <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                </svg>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold">1</div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Анализ и планирование</h3>
+            <p class="text-gray-600 text-base leading-relaxed">
+              Изучаем ваши потребности, анализируем требования и создаем техническое задание
+            </p>
+            <div class="mt-4 text-sm text-blue-600 font-medium">1-2 недели</div>
+          </div>
+
+          <!-- Step 2: Design -->
+          <div class="group relative text-center">
+            <div class="relative mb-8">
+              <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h4a2 2 0 002-2V9a2 2 0 00-2-2H7a2 2 0 00-2 2v6a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold">2</div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Проектирование</h3>
+            <p class="text-gray-600 text-base leading-relaxed">
+              Создаем системную архитектуру, прототипы интерфейсов и выбираем оптимальные технологии
+            </p>
+            <div class="mt-4 text-sm text-green-600 font-medium">1-3 недели</div>
+          </div>
+
+          <!-- Step 3: Development -->
+          <div class="group relative text-center">
+            <div class="relative mb-8">
+              <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold">3</div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Разработка</h3>
+            <p class="text-gray-600 text-base leading-relaxed">
+              Пишем код, интегрируем компоненты и проводим тестирование на каждом этапе
+            </p>
+            <div class="mt-4 text-sm text-purple-600 font-medium">2-8 недель</div>
+          </div>
+
+          <!-- Step 4: Launch -->
+          <div class="group relative text-center">
+            <div class="relative mb-8">
+              <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                </svg>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-sm font-bold">4</div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Запуск и поддержка</h3>
+            <p class="text-gray-600 text-base leading-relaxed">
+              Развертываем решение, обучаем команду и обеспечиваем техническую поддержку
+            </p>
+            <div class="mt-4 text-sm text-pink-600 font-medium">1 неделя + поддержка</div>
+          </div>
+        </div>
+
+        <!-- Process Benefits -->
+        <div class="mt-20 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-12">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">Преимущества нашего подхода</h3>
+            <p class="text-xl text-gray-600">Почему клиенты выбирают именно нас</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3">Прозрачность</h4>
+              <p class="text-gray-600">Регулярные отчеты о прогрессе и демонстрации результатов</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3">Гибкость</h4>
+              <p class="text-gray-600">Адаптируем процесс под ваши потребности и изменения</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3">Сроки</h4>
+              <p class="text-gray-600">Соблюдаем договоренности по времени и бюджету</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -189,7 +323,7 @@
                   </div>
                   <div class="flex items-center space-x-3">
                     <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span class="text-gray-700 font-medium">AWS & Azure</span>
+                    <span class="text-gray-700 font-medium">Yandex Cloud & AWS</span>
                   </div>
                   <div class="flex items-center space-x-3">
                     <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
@@ -201,16 +335,333 @@
                   </div>
                   <div class="flex items-center space-x-3">
                     <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
-                    <span class="text-gray-700 font-medium">Terraform & Ansible</span>
+                    <span class="text-gray-700 font-medium">SberCloud & VK Cloud</span>
                   </div>
                   <div class="flex items-center space-x-3">
                     <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <span class="text-gray-700 font-medium">Jenkins & GitLab CI</span>
+                    <span class="text-gray-700 font-medium">Terraform & Ansible</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cloud Providers Section -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Облачные решения</h2>
+          <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+            Работаем как с российскими, так и с зарубежными облачными провайдерами, 
+            выбирая оптимальное решение для каждого проекта
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-16 mb-16">
+          <!-- Russian Clouds -->
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-10">
+            <div class="text-center mb-8">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <span class="text-white text-2xl">🇷🇺</span>
+              </div>
+              <h3 class="text-3xl font-bold text-gray-900 mb-4">Российские облака</h3>
+              <p class="text-gray-600 text-lg">Соответствие требованиям локализации данных и законодательству РФ</p>
+            </div>
+            
+            <div class="space-y-6">
+              <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <div class="flex items-center mb-3">
+                  <div class="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-white text-sm font-bold">YC</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-gray-900">Yandex Cloud</h4>
+                </div>
+                <p class="text-gray-600 text-sm mb-3">Полнофункциональная облачная платформа от Яндекса</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full">Compute Cloud</span>
+                  <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full">Managed K8s</span>
+                  <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full">DataSphere</span>
+                </div>
+              </div>
+              
+              <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <div class="flex items-center mb-3">
+                  <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-white text-sm font-bold">SB</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-gray-900">SberCloud</h4>
+                </div>
+                <p class="text-gray-600 text-sm mb-3">Корпоративное облако с продвинутыми AI/ML сервисами</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">Advanced AI</span>
+                  <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">Big Data</span>
+                  <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">Enterprise</span>
+                </div>
+              </div>
+              
+              <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <div class="flex items-center mb-3">
+                  <div class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-white text-sm font-bold">CR</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-gray-900">Cloud.ru</h4>
+                </div>
+                <p class="text-gray-600 text-sm mb-3">Государственное облако с соблюдением всех требований безопасности</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">ФЗ-152</span>
+                  <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">ФСТЭК</span>
+                  <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Госсектор</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- International Clouds -->
+          <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-3xl p-10">
+            <div class="text-center mb-8">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <span class="text-white text-2xl">🌍</span>
+              </div>
+              <h3 class="text-3xl font-bold text-gray-900 mb-4">Зарубежные облака</h3>
+              <p class="text-gray-600 text-lg">Глобальные решения с передовыми технологиями и сервисами</p>
+            </div>
+            
+            <div class="space-y-6">
+              <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <div class="flex items-center mb-3">
+                  <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-white text-sm font-bold">AWS</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-gray-900">Amazon Web Services</h4>
+                </div>
+                <p class="text-gray-600 text-sm mb-3">Лидер рынка облачных технологий с богатой экосистемой</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">EC2</span>
+                  <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Lambda</span>
+                  <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">EKS</span>
+                </div>
+              </div>
+              
+              <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <div class="flex items-center mb-3">
+                  <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-white text-sm font-bold">AZ</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-gray-900">Microsoft Azure</h4>
+                </div>
+                <p class="text-gray-600 text-sm mb-3">Корпоративное облако с интеграцией Microsoft экосистемы</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">App Service</span>
+                  <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">AKS</span>
+                  <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">AI Services</span>
+                </div>
+              </div>
+              
+              <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <div class="flex items-center mb-3">
+                  <div class="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-white text-sm font-bold">DO</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-gray-900">DigitalOcean</h4>
+                </div>
+                <p class="text-gray-600 text-sm mb-3">Простое и доступное облако для быстрого развертывания</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Droplets</span>
+                  <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Kubernetes</span>
+                  <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Spaces</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Real Examples -->
+        <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-12">
+          <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Примеры реализованных проектов</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Example 1 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 text-center">
+              <div class="text-4xl mb-4">🏦</div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3">Банковская система</h4>
+              <p class="text-gray-600 text-sm mb-4">Миграция core banking системы в SberCloud с соблюдением требований ЦБ РФ</p>
+              <div class="flex justify-center">
+                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">SberCloud</span>
+              </div>
+            </div>
+            
+            <!-- Example 2 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 text-center">
+              <div class="text-4xl mb-4">🏭</div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3">Промышленный IoT</h4>
+              <p class="text-gray-600 text-sm mb-4">Система мониторинга оборудования на базе Yandex Cloud IoT Core</p>
+              <div class="flex justify-center">
+                <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full">Yandex Cloud</span>
+              </div>
+            </div>
+            
+            <!-- Example 3 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 text-center">
+              <div class="text-4xl mb-4">🛒</div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3">E-commerce платформа</h4>
+              <p class="text-gray-600 text-sm mb-4">Высоконагруженный интернет-магазин на AWS с автомасштабированием</p>
+              <div class="flex justify-center">
+                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">AWS</span>
+              </div>
+            </div>
+            
+            <!-- Example 4 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 text-center">
+              <div class="text-4xl mb-4">🏛️</div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3">Госуслуги</h4>
+              <p class="text-gray-600 text-sm mb-4">Портал государственных услуг в Cloud.ru с сертификацией ФСТЭК</p>
+              <div class="flex justify-center">
+                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Cloud.ru</span>
+              </div>
+            </div>
+            
+            <!-- Example 5 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 text-center">
+              <div class="text-4xl mb-4">🎮</div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3">Игровая платформа</h4>
+              <p class="text-gray-600 text-sm mb-4">Мультиплеерная игра с глобальными серверами на Azure</p>
+              <div class="flex justify-center">
+                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Azure</span>
+              </div>
+            </div>
+            
+            <!-- Example 6 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 text-center">
+              <div class="text-4xl mb-4">🚀</div>
+              <h4 class="text-xl font-bold text-gray-900 mb-3">Стартап MVP</h4>
+              <p class="text-gray-600 text-sm mb-4">Быстрое развертывание прототипа мобильного приложения на DigitalOcean</p>
+              <div class="flex justify-center">
+                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">DigitalOcean</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Why Multi-Cloud -->
+          <div class="mt-12 p-8 bg-white rounded-2xl shadow-lg border border-gray-200">
+            <h4 class="text-2xl font-bold text-gray-900 mb-6 text-center">Почему мы работаем с разными облаками?</h4>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="text-center">
+                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <h5 class="text-lg font-bold text-gray-900 mb-2">Соответствие требованиям</h5>
+                <p class="text-gray-600 text-sm">Российские облака для проектов с требованиями по локализации данных</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                  </svg>
+                </div>
+                <h5 class="text-lg font-bold text-gray-900 mb-2">Оптимизация затрат</h5>
+                <p class="text-gray-600 text-sm">Выбираем наиболее экономичное решение для каждого конкретного проекта</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <h5 class="text-lg font-bold text-gray-900 mb-2">Технологические возможности</h5>
+                <p class="text-gray-600 text-sm">Используем лучшие сервисы каждой платформы для решения задач</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated Teams Section -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Индивидуальные команды</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">Для больших проектов мы собираем персональную команду разработчиков под ваши задачи</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-10">
+              <h3 class="text-3xl font-bold text-gray-900 mb-8">Почему выбирают нас?</h3>
+              <div class="space-y-6">
+                <div class="flex items-center">
+                  <div class="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-6"></div>
+                  <span class="text-gray-700 text-lg font-medium">Быстрый подбор команды за 1-2 недели</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-4 h-4 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mr-6"></div>
+                  <span class="text-gray-700 text-lg font-medium">100% фокус на вашем проекте</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-6"></div>
+                  <span class="text-gray-700 text-lg font-medium">Экономия до 40% от штатных сотрудников</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-4 h-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mr-6"></div>
+                  <span class="text-gray-700 text-lg font-medium">Опытные специалисты с 3+ лет стажа</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="bg-white rounded-3xl p-10 shadow-2xl border border-gray-200 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-full translate-y-12 -translate-x-12"></div>
+              <div class="relative z-10">
+                <h3 class="text-3xl font-bold text-gray-900 mb-8">Состав команды</h3>
+                <div class="grid grid-cols-2 gap-6">
+                  <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <span class="text-white text-sm font-bold">TL</span>
+                    </div>
+                    <div class="text-gray-900 font-semibold text-sm">Team Lead</div>
+                  </div>
+                  <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <span class="text-white text-sm font-bold">BE</span>
+                    </div>
+                    <div class="text-gray-900 font-semibold text-sm">Backend</div>
+                  </div>
+                  <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <span class="text-white text-sm font-bold">FE</span>
+                    </div>
+                    <div class="text-gray-900 font-semibold text-sm">Frontend</div>
+                  </div>
+                  <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <span class="text-white text-sm font-bold">QA</span>
+                    </div>
+                    <div class="text-gray-900 font-semibold text-sm">QA Engineer</div>
+                  </div>
+                </div>
+                <div class="mt-8 text-center">
+                  <div class="text-2xl font-bold text-gray-900 mb-2">от 1,200,000 ₽/мес</div>
+                  <div class="text-gray-600">команда 4-6 человек</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-16">
+          <NuxtLink to="/services" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            Подробнее о командах
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </NuxtLink>
         </div>
       </div>
     </section>

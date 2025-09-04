@@ -15,6 +15,7 @@
             <div class="ml-10 flex items-baseline space-x-8">
               <NuxtLink to="/" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Главная</NuxtLink>
               <NuxtLink to="/services" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Услуги</NuxtLink>
+              <NuxtLink to="/process" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Процесс</NuxtLink>
               <NuxtLink to="/about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">О нас</NuxtLink>
               <NuxtLink to="/contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Контакты</NuxtLink>
             </div>
@@ -45,8 +46,8 @@
               <span class="text-blue-600">Tech</span>Bit
             </h3>
             <p class="text-gray-600 text-sm leading-relaxed max-w-md">
-              Экспертные услуги в области автоматизации, DevOps и веб-разработки для вашего бизнеса. 
-              Мы помогаем компаниям расти через технологии.
+              Экспертные услуги в области автоматизации, DevOps, веб-разработки, Big Data и искусственного интеллекта. 
+              Мы помогаем компаниям расти через инновационные технологии.
             </p>
           </div>
           <div>
@@ -55,6 +56,8 @@
               <li><a href="/services" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Автоматизация</a></li>
               <li><a href="/services" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">DevOps</a></li>
               <li><a href="/services" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Веб-разработка</a></li>
+              <li><a href="/services" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Big Data & ИИ</a></li>
+              <li><a href="/services" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Индивидуальные команды</a></li>
             </ul>
           </div>
           <div>
@@ -68,7 +71,7 @@
         </div>
         <div class="border-t border-gray-200 mt-8 pt-8">
           <p class="text-gray-500 text-sm text-center">
-            © 2024 TechBit. Все права защищены.
+            © {{ currentYear }} TechBit. Все права защищены.
           </p>
         </div>
       </div>
@@ -78,4 +81,5 @@
 
 <script setup>
 // Default layout для всех страниц
+const currentYear = new Date().getFullYear()
 </script>
