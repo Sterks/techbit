@@ -188,7 +188,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold text-gray-900 mb-2">Телефон</h3>
-                  <p class="text-gray-600 text-lg">+7 (915) 702-67-20</p>
+                  <p class="text-gray-600 text-lg">+7 (910) 537-39-05</p>
                   <p class="text-gray-500 text-base">Пн-Пт: 9:00 - 21:00</p>
                 </div>
               </div>
@@ -203,7 +203,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold text-gray-900 mb-2">Адрес</h3>
-                  <p class="text-gray-600 text-lg">г. Москва, ул. Тверская, д. 1</p>
+                  <p class="text-gray-600 text-lg">г. Москва, вн.тер.г. Муниципальный округ Останкинский, ул. Годовикова, д. 9</p>
                   <p class="text-gray-500 text-base">Бизнес-центр "Тверской"</p>
                 </div>
               </div>
