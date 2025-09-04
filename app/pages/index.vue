@@ -157,6 +157,458 @@
       </div>
     </section>
 
+    <!-- DevOps Pipeline Section -->
+    <section class="py-20 lg:py-32 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      <!-- Background elements -->
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0); background-size: 50px 50px;"></div>
+        <div class="absolute top-20 left-10 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 bg-purple-400/10 rounded-full blur-3xl animate-pulse"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <div class="mb-6">
+            <span class="inline-flex items-center px-6 py-3 rounded-full text-sm font-bold bg-white/10 backdrop-blur-sm text-white border border-white/20 shadow-lg">
+              🚀 DevOps Pipeline
+            </span>
+          </div>
+          <h2 class="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
+            <span class="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              От кода до продакшена
+            </span>
+          </h2>
+          <p class="text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+            Полный жизненный цикл разработки с автоматизацией, контейнеризацией и оркестрацией в Kubernetes
+          </p>
+        </div>
+
+        <!-- Pipeline Flow -->
+        <div class="mb-20">
+          <div class="grid lg:grid-cols-6 gap-4 mb-12">
+            <!-- Stage 1: Development -->
+            <div class="lg:col-span-1 relative">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-bold text-white mb-2">Development</h3>
+                  <div class="text-sm text-white/70 space-y-1">
+                    <div>Git Flow</div>
+                    <div>Feature Branches</div>
+                    <div>Code Review</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Arrow -->
+              <div class="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
+                <div class="w-4 h-4 bg-blue-400 rounded-full"></div>
+                <div class="w-8 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 -mt-2 ml-4"></div>
+              </div>
+            </div>
+
+            <!-- Stage 2: CI -->
+            <div class="lg:col-span-1 relative">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-bold text-white mb-2">CI Pipeline</h3>
+                  <div class="text-sm text-white/70 space-y-1">
+                    <div>Automated Tests</div>
+                    <div>Code Quality</div>
+                    <div>Security Scan</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Arrow -->
+              <div class="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
+                <div class="w-4 h-4 bg-purple-400 rounded-full"></div>
+                <div class="w-8 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 -mt-2 ml-4"></div>
+              </div>
+            </div>
+
+            <!-- Stage 3: Build -->
+            <div class="lg:col-span-1 relative">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-bold text-white mb-2">Build & Package</h3>
+                  <div class="text-sm text-white/70 space-y-1">
+                    <div>Docker Build</div>
+                    <div>Image Registry</div>
+                    <div>Artifact Store</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Arrow -->
+              <div class="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
+                <div class="w-4 h-4 bg-pink-400 rounded-full"></div>
+                <div class="w-8 h-0.5 bg-gradient-to-r from-pink-400 to-orange-400 -mt-2 ml-4"></div>
+              </div>
+            </div>
+
+            <!-- Stage 4: Deploy Staging -->
+            <div class="lg:col-span-1 relative">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-bold text-white mb-2">Staging Deploy</h3>
+                  <div class="text-sm text-white/70 space-y-1">
+                    <div>K8s Deployment</div>
+                    <div>Integration Tests</div>
+                    <div>QA Validation</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Arrow -->
+              <div class="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
+                <div class="w-4 h-4 bg-red-400 rounded-full"></div>
+                <div class="w-8 h-0.5 bg-gradient-to-r from-orange-400 to-red-400 -mt-2 ml-4"></div>
+              </div>
+            </div>
+
+            <!-- Stage 5: Production Deploy -->
+            <div class="lg:col-span-1 relative">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-bold text-white mb-2">Production</h3>
+                  <div class="text-sm text-white/70 space-y-1">
+                    <div>Blue-Green Deploy</div>
+                    <div>Health Checks</div>
+                    <div>Rollback Ready</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Arrow -->
+              <div class="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
+                <div class="w-4 h-4 bg-yellow-400 rounded-full"></div>
+                <div class="w-8 h-0.5 bg-gradient-to-r from-red-400 to-yellow-400 -mt-2 ml-4"></div>
+              </div>
+            </div>
+
+            <!-- Stage 6: Monitor -->
+            <div class="lg:col-span-1">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-bold text-white mb-2">Monitoring</h3>
+                  <div class="text-sm text-white/70 space-y-1">
+                    <div>Metrics & Logs</div>
+                    <div>Alerting</div>
+                    <div>Performance</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Kubernetes Deployment -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10 mb-20">
+          <h3 class="text-3xl font-bold text-white mb-8 text-center">Kubernetes Deployment Pipeline</h3>
+          
+          <div class="grid lg:grid-cols-3 gap-8 mb-12">
+            <!-- Preparation -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h4 class="text-xl font-bold text-white mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+                  <span class="text-white text-sm font-bold">1</span>
+                </div>
+                Подготовка
+              </h4>
+              <div class="space-y-4 text-white/80">
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2"></div>
+                  <div>
+                    <div class="font-semibold">Dockerfile оптимизация</div>
+                    <div class="text-sm text-white/60">Multi-stage build, минимальный образ</div>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2"></div>
+                  <div>
+                    <div class="font-semibold">Kubernetes манифесты</div>
+                    <div class="text-sm text-white/60">Deployment, Service, Ingress, ConfigMap</div>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2"></div>
+                  <div>
+                    <div class="font-semibold">Helm Charts</div>
+                    <div class="text-sm text-white/60">Темплейты для разных окружений</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Deployment -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h4 class="text-xl font-bold text-white mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                  <span class="text-white text-sm font-bold">2</span>
+                </div>
+                Деплой
+              </h4>
+              <div class="space-y-4 text-white/80">
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2"></div>
+                  <div>
+                    <div class="font-semibold">Rolling Update</div>
+                    <div class="text-sm text-white/60">Постепенное обновление подов</div>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2"></div>
+                  <div>
+                    <div class="font-semibold">Health Checks</div>
+                    <div class="text-sm text-white/60">Readiness и Liveness проверки</div>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2"></div>
+                  <div>
+                    <div class="font-semibold">Resource Limits</div>
+                    <div class="text-sm text-white/60">CPU, Memory, автомасштабирование</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Monitoring -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h4 class="text-xl font-bold text-white mb-6 flex items-center">
+                <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
+                  <span class="text-white text-sm font-bold">3</span>
+                </div>
+                Мониторинг
+              </h4>
+              <div class="space-y-4 text-white/80">
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2"></div>
+                  <div>
+                    <div class="font-semibold">Prometheus + Grafana</div>
+                    <div class="text-sm text-white/60">Метрики приложений и инфраструктуры</div>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2"></div>
+                  <div>
+                    <div class="font-semibold">ELK Stack</div>
+                    <div class="text-sm text-white/60">Централизованное логирование</div>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2"></div>
+                  <div>
+                    <div class="font-semibold">Jaeger Tracing</div>
+                    <div class="text-sm text-white/60">Распределенная трассировка</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pipeline Tools -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span class="text-white text-sm font-bold">Git</span>
+              </div>
+              <h5 class="text-white font-semibold mb-2">Version Control</h5>
+              <p class="text-white/60 text-sm">GitLab, GitHub, Bitbucket</p>
+            </div>
+            
+            <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span class="text-white text-sm font-bold">CI</span>
+              </div>
+              <h5 class="text-white font-semibold mb-2">CI/CD</h5>
+              <p class="text-white/60 text-sm">Jenkins, GitLab CI, GitHub Actions</p>
+            </div>
+            
+            <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span class="text-white text-sm font-bold">K8s</span>
+              </div>
+              <h5 class="text-white font-semibold mb-2">Orchestration</h5>
+              <p class="text-white/60 text-sm">Kubernetes, Helm, ArgoCD</p>
+            </div>
+            
+            <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span class="text-white text-sm font-bold">IaC</span>
+              </div>
+              <h5 class="text-white font-semibold mb-2">Infrastructure</h5>
+              <p class="text-white/60 text-sm">Terraform, Ansible, Pulumi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pipeline Diagram -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10 mb-20">
+          <h3 class="text-3xl font-bold text-white mb-8 text-center">Полная схема жизненного цикла разработки</h3>
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div class="mermaid-container text-center">
+              <p class="text-white/80 mb-6">Детальная диаграмма процесса от разработки до мониторинга в продакшене</p>
+              <div class="bg-white rounded-xl p-6">
+                <div id="pipeline-diagram" class="mermaid">
+graph TD
+    A["👨‍💻 Development<br/>Git Flow, Feature Branches"] --> B["🔍 Code Review<br/>Pull Request, Peer Review"]
+    B --> C["🧪 CI Pipeline<br/>Unit Tests, Integration Tests"]
+    C --> D["🔒 Security Scan<br/>SAST, Dependency Check"]
+    D --> E["📦 Docker Build<br/>Multi-stage, Optimization"]
+    E --> F["📋 Registry Push<br/>Harbor, ECR, GCR"]
+    F --> G["🚀 Staging Deploy<br/>Kubernetes Deployment"]
+    G --> H["✅ QA Testing<br/>Automated & Manual Tests"]
+    H --> I{"🎯 Production<br/>Ready?"}
+    I -->|Yes| J["🌟 Blue-Green Deploy<br/>Zero Downtime"]
+    I -->|No| K["🔄 Fix Issues"]
+    K --> A
+    J --> L["💚 Health Checks<br/>Readiness & Liveness"]
+    L --> M["📊 Monitoring<br/>Prometheus + Grafana"]
+    M --> N["📝 Logging<br/>ELK Stack"]
+    N --> O["🔍 Tracing<br/>Jaeger"]
+    O --> P["📈 Metrics Analysis"]
+    P --> Q{"🚨 Issues<br/>Detected?"}
+    Q -->|Yes| R["🔄 Rollback<br/>Automated Recovery"]
+    Q -->|No| S["✨ Success!"]
+    R --> T["🔧 Hotfix"]
+    T --> A
+    
+    %% Kubernetes specific flow
+    G --> G1["⚙️ K8s Manifest<br/>Deployment.yaml"]
+    G1 --> G2["🎛️ ConfigMap<br/>Environment Config"]
+    G2 --> G3["🔐 Secrets<br/>Database, API Keys"]
+    G3 --> G4["🌐 Service<br/>Load Balancing"]
+    G4 --> G5["🚪 Ingress<br/>External Access"]
+    
+    %% GitOps Flow
+    J --> J1["📝 GitOps<br/>ArgoCD/Flux"]
+    J1 --> J2["🔄 Auto Sync<br/>Git → Cluster"]
+    J2 --> J3["📊 Drift Detection<br/>State Monitoring"]
+    
+    %% Styling
+    classDef devStage fill:#4ade80,stroke:#16a34a,stroke-width:2px,color:#000
+    classDef ciStage fill:#3b82f6,stroke:#1d4ed8,stroke-width:2px,color:#fff
+    classDef buildStage fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
+    classDef deployStage fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#000
+    classDef prodStage fill:#ef4444,stroke:#dc2626,stroke-width:2px,color:#fff
+    classDef monitorStage fill:#eab308,stroke:#ca8a04,stroke-width:2px,color:#000
+    classDef k8sStage fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#fff
+    classDef gitopsStage fill:#ec4899,stroke:#db2777,stroke-width:2px,color:#fff
+    
+    class A,B,K,T devStage
+    class C,D ciStage
+    class E,F buildStage
+    class G,H,G1,G2,G3,G4,G5 k8sStage
+    class I,J,L,R deployStage
+    class M,N,O,P,Q,S monitorStage
+    class J1,J2,J3 gitopsStage
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Advanced Practices -->
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- GitOps -->
+          <div class="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-3xl p-10 border border-white/10">
+            <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+              <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mr-4">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              GitOps подход
+            </h3>
+            <div class="space-y-4 text-white/80">
+              <div class="flex items-start">
+                <div class="w-3 h-3 bg-blue-400 rounded-full mr-4 mt-1"></div>
+                <div>
+                  <div class="font-semibold text-white">Декларативное управление</div>
+                  <div class="text-sm text-white/60">Весь стейт инфраструктуры в Git репозитории</div>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-3 h-3 bg-purple-400 rounded-full mr-4 mt-1"></div>
+                <div>
+                  <div class="font-semibold text-white">ArgoCD/Flux</div>
+                  <div class="text-sm text-white/60">Автоматическая синхронизация с кластером</div>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-3 h-3 bg-green-400 rounded-full mr-4 mt-1"></div>
+                <div>
+                  <div class="font-semibold text-white">Откат изменений</div>
+                  <div class="text-sm text-white/60">Простой rollback через Git revert</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security & Compliance -->
+          <div class="bg-gradient-to-br from-green-500/10 to-teal-500/10 backdrop-blur-sm rounded-3xl p-10 border border-white/10">
+            <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+              <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center mr-4">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              Безопасность
+            </h3>
+            <div class="space-y-4 text-white/80">
+              <div class="flex items-start">
+                <div class="w-3 h-3 bg-green-400 rounded-full mr-4 mt-1"></div>
+                <div>
+                  <div class="font-semibold text-white">Container Security</div>
+                  <div class="text-sm text-white/60">Сканирование образов на уязвимости</div>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-3 h-3 bg-teal-400 rounded-full mr-4 mt-1"></div>
+                <div>
+                  <div class="font-semibold text-white">RBAC & Network Policies</div>
+                  <div class="text-sm text-white/60">Контроль доступа и сетевая изоляция</div>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-3 h-3 bg-blue-400 rounded-full mr-4 mt-1"></div>
+                <div>
+                  <div class="font-semibold text-white">Secrets Management</div>
+                  <div class="text-sm text-white/60">HashiCorp Vault, Kubernetes Secrets</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Development Process Section -->
     <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
