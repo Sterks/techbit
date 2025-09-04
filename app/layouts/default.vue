@@ -63,8 +63,8 @@
           <div>
             <h4 class="text-sm font-semibold text-gray-900 mb-4">Контакты</h4>
             <ul class="space-y-2 text-sm">
-              <li class="text-gray-600">info@techbit.com</li>
-              <li class="text-gray-600">+7 (999) 123-45-67</li>
+              <li class="text-gray-600">info@techbit.su</li>
+              <li class="text-gray-600">+7 (910) 537-39-05</li>
               <li class="text-gray-600">Москва, Россия</li>
             </ul>
           </div>
