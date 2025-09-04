@@ -185,9 +185,10 @@
 
         <!-- Pipeline Flow -->
         <div class="mb-20">
-          <div class="grid lg:grid-cols-6 gap-4 mb-12">
+          <!-- First Row: Development → CI → Build -->
+          <div class="grid lg:grid-cols-3 gap-6 mb-8">
             <!-- Stage 1: Development -->
-            <div class="lg:col-span-1 relative">
+            <div class="relative">
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
                 <div class="text-center">
                   <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
@@ -203,15 +204,17 @@
                   </div>
                 </div>
               </div>
-              <!-- Arrow -->
-              <div class="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
-                <div class="w-4 h-4 bg-blue-400 rounded-full"></div>
-                <div class="w-8 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 -mt-2 ml-4"></div>
+              <!-- Arrow Right -->
+              <div class="hidden lg:block absolute -right-3 top-1/2 transform -translate-y-1/2 z-10">
+                <div class="flex items-center">
+                  <div class="w-6 h-0.5 bg-gradient-to-r from-green-400 to-blue-400"></div>
+                  <div class="w-3 h-3 bg-blue-400 rounded-full -ml-1"></div>
+                </div>
               </div>
             </div>
 
             <!-- Stage 2: CI -->
-            <div class="lg:col-span-1 relative">
+            <div class="relative">
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
                 <div class="text-center">
                   <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
@@ -227,15 +230,17 @@
                   </div>
                 </div>
               </div>
-              <!-- Arrow -->
-              <div class="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
-                <div class="w-4 h-4 bg-purple-400 rounded-full"></div>
-                <div class="w-8 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 -mt-2 ml-4"></div>
+              <!-- Arrow Right -->
+              <div class="hidden lg:block absolute -right-3 top-1/2 transform -translate-y-1/2 z-10">
+                <div class="flex items-center">
+                  <div class="w-6 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+                  <div class="w-3 h-3 bg-purple-400 rounded-full -ml-1"></div>
+                </div>
               </div>
             </div>
 
             <!-- Stage 3: Build -->
-            <div class="lg:col-span-1 relative">
+            <div class="relative">
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
                 <div class="text-center">
                   <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
@@ -251,15 +256,21 @@
                   </div>
                 </div>
               </div>
-              <!-- Arrow -->
-              <div class="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
-                <div class="w-4 h-4 bg-pink-400 rounded-full"></div>
-                <div class="w-8 h-0.5 bg-gradient-to-r from-pink-400 to-orange-400 -mt-2 ml-4"></div>
-              </div>
             </div>
+          </div>
 
+          <!-- Connecting Arrow Down -->
+          <div class="flex justify-center mb-8">
+            <div class="flex flex-col items-center">
+              <div class="w-0.5 h-8 bg-gradient-to-b from-purple-400 to-orange-400"></div>
+              <div class="w-3 h-3 bg-orange-400 rounded-full -mt-1"></div>
+            </div>
+          </div>
+
+          <!-- Second Row: Staging → Production → Monitoring -->
+          <div class="grid lg:grid-cols-3 gap-6">
             <!-- Stage 4: Deploy Staging -->
-            <div class="lg:col-span-1 relative">
+            <div class="relative">
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
                 <div class="text-center">
                   <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
@@ -275,15 +286,17 @@
                   </div>
                 </div>
               </div>
-              <!-- Arrow -->
-              <div class="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
-                <div class="w-4 h-4 bg-red-400 rounded-full"></div>
-                <div class="w-8 h-0.5 bg-gradient-to-r from-orange-400 to-red-400 -mt-2 ml-4"></div>
+              <!-- Arrow Right -->
+              <div class="hidden lg:block absolute -right-3 top-1/2 transform -translate-y-1/2 z-10">
+                <div class="flex items-center">
+                  <div class="w-6 h-0.5 bg-gradient-to-r from-orange-400 to-red-400"></div>
+                  <div class="w-3 h-3 bg-red-400 rounded-full -ml-1"></div>
+                </div>
               </div>
             </div>
 
             <!-- Stage 5: Production Deploy -->
-            <div class="lg:col-span-1 relative">
+            <div class="relative">
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
                 <div class="text-center">
                   <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
@@ -299,15 +312,17 @@
                   </div>
                 </div>
               </div>
-              <!-- Arrow -->
-              <div class="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
-                <div class="w-4 h-4 bg-yellow-400 rounded-full"></div>
-                <div class="w-8 h-0.5 bg-gradient-to-r from-red-400 to-yellow-400 -mt-2 ml-4"></div>
+              <!-- Arrow Right -->
+              <div class="hidden lg:block absolute -right-3 top-1/2 transform -translate-y-1/2 z-10">
+                <div class="flex items-center">
+                  <div class="w-6 h-0.5 bg-gradient-to-r from-red-400 to-yellow-400"></div>
+                  <div class="w-3 h-3 bg-yellow-400 rounded-full -ml-1"></div>
+                </div>
               </div>
             </div>
 
             <!-- Stage 6: Monitor -->
-            <div class="lg:col-span-1">
+            <div>
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl h-full">
                 <div class="text-center">
                   <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
@@ -468,68 +483,234 @@
           </div>
         </div>
 
-        <!-- Pipeline Diagram -->
+        <!-- Detailed Pipeline Flow -->
         <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10 mb-20">
           <h3 class="text-3xl font-bold text-white mb-8 text-center">Полная схема жизненного цикла разработки</h3>
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div class="mermaid-container text-center">
-              <p class="text-white/80 mb-6">Детальная диаграмма процесса от разработки до мониторинга в продакшене</p>
-              <div class="bg-white rounded-xl p-6">
-                <div id="pipeline-diagram" class="mermaid">
-graph TD
-    A["👨‍💻 Development<br/>Git Flow, Feature Branches"] --> B["🔍 Code Review<br/>Pull Request, Peer Review"]
-    B --> C["🧪 CI Pipeline<br/>Unit Tests, Integration Tests"]
-    C --> D["🔒 Security Scan<br/>SAST, Dependency Check"]
-    D --> E["📦 Docker Build<br/>Multi-stage, Optimization"]
-    E --> F["📋 Registry Push<br/>Harbor, ECR, GCR"]
-    F --> G["🚀 Staging Deploy<br/>Kubernetes Deployment"]
-    G --> H["✅ QA Testing<br/>Automated & Manual Tests"]
-    H --> I{"🎯 Production<br/>Ready?"}
-    I -->|Yes| J["🌟 Blue-Green Deploy<br/>Zero Downtime"]
-    I -->|No| K["🔄 Fix Issues"]
-    K --> A
-    J --> L["💚 Health Checks<br/>Readiness & Liveness"]
-    L --> M["📊 Monitoring<br/>Prometheus + Grafana"]
-    M --> N["📝 Logging<br/>ELK Stack"]
-    N --> O["🔍 Tracing<br/>Jaeger"]
-    O --> P["📈 Metrics Analysis"]
-    P --> Q{"🚨 Issues<br/>Detected?"}
-    Q -->|Yes| R["🔄 Rollback<br/>Automated Recovery"]
-    Q -->|No| S["✨ Success!"]
-    R --> T["🔧 Hotfix"]
-    T --> A
-    
-    %% Kubernetes specific flow
-    G --> G1["⚙️ K8s Manifest<br/>Deployment.yaml"]
-    G1 --> G2["🎛️ ConfigMap<br/>Environment Config"]
-    G2 --> G3["🔐 Secrets<br/>Database, API Keys"]
-    G3 --> G4["🌐 Service<br/>Load Balancing"]
-    G4 --> G5["🚪 Ingress<br/>External Access"]
-    
-    %% GitOps Flow
-    J --> J1["📝 GitOps<br/>ArgoCD/Flux"]
-    J1 --> J2["🔄 Auto Sync<br/>Git → Cluster"]
-    J2 --> J3["📊 Drift Detection<br/>State Monitoring"]
-    
-    %% Styling
-    classDef devStage fill:#4ade80,stroke:#16a34a,stroke-width:2px,color:#000
-    classDef ciStage fill:#3b82f6,stroke:#1d4ed8,stroke-width:2px,color:#fff
-    classDef buildStage fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
-    classDef deployStage fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#000
-    classDef prodStage fill:#ef4444,stroke:#dc2626,stroke-width:2px,color:#fff
-    classDef monitorStage fill:#eab308,stroke:#ca8a04,stroke-width:2px,color:#000
-    classDef k8sStage fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#fff
-    classDef gitopsStage fill:#ec4899,stroke:#db2777,stroke-width:2px,color:#fff
-    
-    class A,B,K,T devStage
-    class C,D ciStage
-    class E,F buildStage
-    class G,H,G1,G2,G3,G4,G5 k8sStage
-    class I,J,L,R deployStage
-    class M,N,O,P,Q,S monitorStage
-    class J1,J2,J3 gitopsStage
+          <p class="text-white/80 mb-12 text-center text-lg">Детальная схема процесса от разработки до мониторинга в продакшене</p>
+          
+          <!-- Main Flow -->
+          <div class="space-y-8">
+            <!-- Development Phase -->
+            <div class="relative">
+              <h4 class="text-xl font-bold text-green-300 mb-4 flex items-center">
+                <span class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">1</span>
+                🚀 Фаза разработки
+              </h4>
+              <div class="grid md:grid-cols-3 gap-4 ml-11">
+                <div class="bg-green-500/20 border border-green-400/30 rounded-xl p-4">
+                  <div class="text-green-300 font-semibold mb-2">👨‍💻 Development</div>
+                  <div class="text-white/70 text-sm">Git Flow, Feature Branches</div>
+                </div>
+                <div class="bg-green-500/20 border border-green-400/30 rounded-xl p-4">
+                  <div class="text-green-300 font-semibold mb-2">🔍 Code Review</div>
+                  <div class="text-white/70 text-sm">Pull Request, Peer Review</div>
+                </div>
+                <div class="bg-green-500/20 border border-green-400/30 rounded-xl p-4">
+                  <div class="text-green-300 font-semibold mb-2">🔄 Fix Issues</div>
+                  <div class="text-white/70 text-sm">Bug fixes, Improvements</div>
                 </div>
               </div>
+              <!-- Arrow down -->
+              <div class="flex justify-center mt-6">
+                <div class="w-0.5 h-8 bg-gradient-to-b from-green-400 to-blue-400"></div>
+              </div>
+            </div>
+
+            <!-- CI/CD Phase -->
+            <div class="relative">
+              <h4 class="text-xl font-bold text-blue-300 mb-4 flex items-center">
+                <span class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">2</span>
+                🔧 Фаза CI/CD
+              </h4>
+              <div class="grid md:grid-cols-4 gap-4 ml-11">
+                <div class="bg-blue-500/20 border border-blue-400/30 rounded-xl p-4">
+                  <div class="text-blue-300 font-semibold mb-2">🧪 CI Pipeline</div>
+                  <div class="text-white/70 text-sm">Unit Tests, Integration Tests</div>
+                </div>
+                <div class="bg-blue-500/20 border border-blue-400/30 rounded-xl p-4">
+                  <div class="text-blue-300 font-semibold mb-2">🔒 Security Scan</div>
+                  <div class="text-white/70 text-sm">SAST, Dependency Check</div>
+                </div>
+                <div class="bg-purple-500/20 border border-purple-400/30 rounded-xl p-4">
+                  <div class="text-purple-300 font-semibold mb-2">📦 Docker Build</div>
+                  <div class="text-white/70 text-sm">Multi-stage, Optimization</div>
+                </div>
+                <div class="bg-purple-500/20 border border-purple-400/30 rounded-xl p-4">
+                  <div class="text-purple-300 font-semibold mb-2">📋 Registry Push</div>
+                  <div class="text-white/70 text-sm">Harbor, ECR, GCR</div>
+                </div>
+              </div>
+              <!-- Arrow down -->
+              <div class="flex justify-center mt-6">
+                <div class="w-0.5 h-8 bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+              </div>
+            </div>
+
+            <!-- Kubernetes Deployment Phase -->
+            <div class="relative">
+              <h4 class="text-xl font-bold text-cyan-300 mb-4 flex items-center">
+                <span class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">3</span>
+                ⚙️ Kubernetes Deployment
+              </h4>
+              <div class="ml-11">
+                <!-- Staging -->
+                <div class="mb-6">
+                  <div class="text-cyan-200 font-semibold mb-3">🚀 Staging Environment</div>
+                  <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-3">
+                    <div class="bg-cyan-500/20 border border-cyan-400/30 rounded-xl p-3">
+                      <div class="text-cyan-300 font-semibold text-sm mb-1">⚙️ K8s Manifest</div>
+                      <div class="text-white/60 text-xs">Deployment.yaml</div>
+                    </div>
+                    <div class="bg-cyan-500/20 border border-cyan-400/30 rounded-xl p-3">
+                      <div class="text-cyan-300 font-semibold text-sm mb-1">🎛️ ConfigMap</div>
+                      <div class="text-white/60 text-xs">Environment Config</div>
+                    </div>
+                    <div class="bg-cyan-500/20 border border-cyan-400/30 rounded-xl p-3">
+                      <div class="text-cyan-300 font-semibold text-sm mb-1">🔐 Secrets</div>
+                      <div class="text-white/60 text-xs">Database, API Keys</div>
+                    </div>
+                    <div class="bg-cyan-500/20 border border-cyan-400/30 rounded-xl p-3">
+                      <div class="text-cyan-300 font-semibold text-sm mb-1">🌐 Service</div>
+                      <div class="text-white/60 text-xs">Load Balancing</div>
+                    </div>
+                    <div class="bg-cyan-500/20 border border-cyan-400/30 rounded-xl p-3">
+                      <div class="text-cyan-300 font-semibold text-sm mb-1">🚪 Ingress</div>
+                      <div class="text-white/60 text-xs">External Access</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- QA Testing -->
+                <div class="bg-orange-500/20 border border-orange-400/30 rounded-xl p-4 mb-4">
+                  <div class="text-orange-300 font-semibold mb-2">✅ QA Testing</div>
+                  <div class="text-white/70 text-sm">Automated & Manual Tests</div>
+                </div>
+              </div>
+              <!-- Arrow down -->
+              <div class="flex justify-center mt-6">
+                <div class="w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-red-400"></div>
+              </div>
+            </div>
+
+            <!-- Production Decision -->
+            <div class="relative">
+              <div class="flex justify-center mb-6">
+                <div class="bg-yellow-500/20 border border-yellow-400/30 rounded-xl p-6 text-center">
+                  <div class="text-yellow-300 font-bold text-lg mb-2">🎯 Production Ready?</div>
+                  <div class="flex gap-4 justify-center">
+                    <div class="bg-green-500/30 border border-green-400/50 rounded-lg px-4 py-2 text-green-300 text-sm">✅ Yes</div>
+                    <div class="bg-red-500/30 border border-red-400/50 rounded-lg px-4 py-2 text-red-300 text-sm">❌ No → Fix Issues</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Arrow down -->
+              <div class="flex justify-center">
+                <div class="w-0.5 h-8 bg-gradient-to-b from-yellow-400 to-red-400"></div>
+              </div>
+            </div>
+
+            <!-- Production Phase -->
+            <div class="relative">
+              <h4 class="text-xl font-bold text-red-300 mb-4 flex items-center">
+                <span class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">4</span>
+                🌟 Production Deployment
+              </h4>
+              <div class="grid md:grid-cols-3 gap-4 ml-11 mb-6">
+                <div class="bg-red-500/20 border border-red-400/30 rounded-xl p-4">
+                  <div class="text-red-300 font-semibold mb-2">🌟 Blue-Green Deploy</div>
+                  <div class="text-white/70 text-sm">Zero Downtime</div>
+                </div>
+                <div class="bg-red-500/20 border border-red-400/30 rounded-xl p-4">
+                  <div class="text-red-300 font-semibold mb-2">💚 Health Checks</div>
+                  <div class="text-white/70 text-sm">Readiness & Liveness</div>
+                </div>
+                <div class="bg-pink-500/20 border border-pink-400/30 rounded-xl p-4">
+                  <div class="text-pink-300 font-semibold mb-2">📝 GitOps</div>
+                  <div class="text-white/70 text-sm">ArgoCD/Flux Auto Sync</div>
+                </div>
+              </div>
+              <!-- Arrow down -->
+              <div class="flex justify-center">
+                <div class="w-0.5 h-8 bg-gradient-to-b from-red-400 to-yellow-400"></div>
+              </div>
+            </div>
+
+            <!-- Monitoring Phase -->
+            <div class="relative">
+              <h4 class="text-xl font-bold text-yellow-300 mb-4 flex items-center">
+                <span class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">5</span>
+                📊 Мониторинг и Observability
+              </h4>
+              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 ml-11 mb-6">
+                <div class="bg-yellow-500/20 border border-yellow-400/30 rounded-xl p-4">
+                  <div class="text-yellow-300 font-semibold mb-2">📊 Monitoring</div>
+                  <div class="text-white/70 text-sm">Prometheus + Grafana</div>
+                </div>
+                <div class="bg-yellow-500/20 border border-yellow-400/30 rounded-xl p-4">
+                  <div class="text-yellow-300 font-semibold mb-2">📝 Logging</div>
+                  <div class="text-white/70 text-sm">ELK Stack</div>
+                </div>
+                <div class="bg-yellow-500/20 border border-yellow-400/30 rounded-xl p-4">
+                  <div class="text-yellow-300 font-semibold mb-2">🔍 Tracing</div>
+                  <div class="text-white/70 text-sm">Jaeger</div>
+                </div>
+                <div class="bg-yellow-500/20 border border-yellow-400/30 rounded-xl p-4">
+                  <div class="text-yellow-300 font-semibold mb-2">📈 Metrics Analysis</div>
+                  <div class="text-white/70 text-sm">Performance Insights</div>
+                </div>
+              </div>
+              
+              <!-- Issue Detection Decision -->
+              <div class="flex justify-center mb-6">
+                <div class="bg-orange-500/20 border border-orange-400/30 rounded-xl p-6 text-center">
+                  <div class="text-orange-300 font-bold text-lg mb-2">🚨 Issues Detected?</div>
+                  <div class="flex gap-4 justify-center">
+                    <div class="bg-red-500/30 border border-red-400/50 rounded-lg px-4 py-2 text-red-300 text-sm">❌ Yes → Rollback</div>
+                    <div class="bg-green-500/30 border border-green-400/50 rounded-lg px-4 py-2 text-green-300 text-sm">✅ No → Success!</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recovery Flow -->
+            <div class="relative">
+              <h4 class="text-xl font-bold text-orange-300 mb-4 flex items-center">
+                <span class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">🔄</span>
+                🛠️ Recovery & Hotfix Process
+              </h4>
+              <div class="grid md:grid-cols-3 gap-4 ml-11">
+                <div class="bg-orange-500/20 border border-orange-400/30 rounded-xl p-4">
+                  <div class="text-orange-300 font-semibold mb-2">🔄 Automated Rollback</div>
+                  <div class="text-white/70 text-sm">Instant Recovery</div>
+                </div>
+                <div class="bg-orange-500/20 border border-orange-400/30 rounded-xl p-4">
+                  <div class="text-orange-300 font-semibold mb-2">🔧 Hotfix Development</div>
+                  <div class="text-white/70 text-sm">Critical Issue Fix</div>
+                </div>
+                <div class="bg-green-500/20 border border-green-400/30 rounded-xl p-4">
+                  <div class="text-green-300 font-semibold mb-2">✨ Success State</div>
+                  <div class="text-white/70 text-sm">Stable Production</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary Stats -->
+          <div class="mt-16 grid md:grid-cols-4 gap-6">
+            <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div class="text-3xl font-bold text-green-400 mb-2">~15</div>
+              <div class="text-white/70">этапов процесса</div>
+            </div>
+            <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div class="text-3xl font-bold text-blue-400 mb-2">100%</div>
+              <div class="text-white/70">автоматизация</div>
+            </div>
+            <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div class="text-3xl font-bold text-purple-400 mb-2">0</div>
+              <div class="text-white/70">простоев</div>
+            </div>
+            <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+              <div class="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
+              <div class="text-white/70">мониторинг</div>
             </div>
           </div>
         </div>

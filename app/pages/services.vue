@@ -69,7 +69,7 @@
                   Аналитика и отчетность
                 </li>
               </ul>
-              <div class="text-blue-600 font-bold text-2xl">От 150,000 ₽</div>
+              <div class="text-blue-600 font-bold text-2xl">От 500,000 ₽</div>
             </div>
           </div>
 
@@ -98,7 +98,7 @@
                   Мониторинг и логирование
                 </li>
               </ul>
-              <div class="text-green-600 font-bold text-2xl">От 200,000 ₽</div>
+              <div class="text-green-600 font-bold text-2xl">От 800,000 ₽</div>
             </div>
           </div>
 
@@ -127,7 +127,7 @@
                   API и микросервисы
                 </li>
               </ul>
-              <div class="text-purple-600 font-bold text-2xl">От 300,000 ₽</div>
+              <div class="text-purple-600 font-bold text-2xl">От 1,200,000 ₽</div>
             </div>
           </div>
 
@@ -156,7 +156,7 @@
                   BI системы и отчеты
                 </li>
               </ul>
-              <div class="text-orange-600 font-bold text-2xl">От 500,000 ₽</div>
+              <div class="text-orange-600 font-bold text-2xl">От 1,500,000 ₽</div>
             </div>
           </div>
         </div>
@@ -706,7 +706,7 @@
                 </div>
                 <h5 class="text-xl font-bold text-gray-900 mb-4">Time & Material</h5>
                 <p class="text-gray-600 mb-6">Оплата по факту затраченного времени. Максимальная гибкость в изменении требований</p>
-              <div class="text-blue-600 font-bold text-2xl mb-2">от 250,000 ₽/мес</div>
+              <div class="text-blue-600 font-bold text-2xl mb-2">от 350,000 ₽/мес</div>
                 <div class="text-gray-500 text-sm">за одного разработчика</div>
               </div>
               
@@ -719,7 +719,7 @@
                 </div>
                 <h5 class="text-xl font-bold text-gray-900 mb-4">Fixed Price</h5>
                 <p class="text-gray-600 mb-6">Фиксированная стоимость проекта. Предсказуемый бюджет и четкие сроки</p>
-              <div class="text-green-600 font-bold text-2xl mb-2">от 2,500,000 ₽</div>
+              <div class="text-green-600 font-bold text-2xl mb-2">от 4,000,000 ₽</div>
                 <div class="text-gray-500 text-sm">за проект (3-6 месяцев)</div>
                 <div class="mt-4 text-green-600 text-sm font-medium">🏆 Популярный выбор</div>
               </div>
@@ -733,7 +733,7 @@
                 </div>
                 <h5 class="text-xl font-bold text-gray-900 mb-4">Retainer</h5>
                 <p class="text-gray-600 mb-6">Ежемесячная подписка на команду. Долгосрочное партнерство с льготными условиями</p>
-              <div class="text-purple-600 font-bold text-2xl mb-2">от 1,200,000 ₽/мес</div>
+              <div class="text-purple-600 font-bold text-2xl mb-2">от 1,800,000 ₽/мес</div>
                 <div class="text-gray-500 text-sm">команда 4-6 человек</div>
               </div>
             </div>
@@ -746,6 +746,317 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
               </NuxtLink>
+            </div>
+          </div>
+        </div>
+
+        <!-- Requirements Analysis Section -->
+        <div class="mt-20 bg-gradient-to-br from-slate-50 to-gray-100 rounded-3xl p-12">
+          <div class="text-center mb-16">
+            <h3 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Сбор и анализ требований</h3>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+              Детальный процесс выявления потребностей, составления PRD и анализа требований — 
+              основа успешной реализации любого проекта
+            </p>
+          </div>
+
+          <!-- Main Requirements Process -->
+          <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <!-- Left: Process Overview -->
+            <div>
+              <h4 class="text-3xl font-bold text-gray-900 mb-8">Этапы работы с требованиями</h4>
+              <div class="space-y-6">
+                <!-- Stage 1 -->
+                <div class="flex items-start p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+                  <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                    <span class="text-white text-sm font-bold">1</span>
+                  </div>
+                  <div>
+                    <h5 class="text-xl font-bold text-gray-900 mb-2">Первичная консультация</h5>
+                    <p class="text-gray-600 text-sm mb-3">Понимание бизнес-целей, проблем и ожиданий от проекта</p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Discovery Session</span>
+                      <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Stakeholder Interview</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="flex items-start p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+                  <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                    <span class="text-white text-sm font-bold">2</span>
+                  </div>
+                  <div>
+                    <h5 class="text-xl font-bold text-gray-900 mb-2">Детальное интервьюирование</h5>
+                    <p class="text-gray-600 text-sm mb-3">Глубокое погружение в бизнес-процессы и пользовательские сценарии</p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">User Stories</span>
+                      <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Process Mapping</span>
+                      <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">As-Is Analysis</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="flex items-start p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+                  <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                    <span class="text-white text-sm font-bold">3</span>
+                  </div>
+                  <div>
+                    <h5 class="text-xl font-bold text-gray-900 mb-2">Составление PRD</h5>
+                    <p class="text-gray-600 text-sm mb-3">Создание Product Requirements Document с детальным описанием функций</p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded">Functional Requirements</span>
+                      <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded">Non-functional Requirements</span>
+                      <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded">Acceptance Criteria</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="flex items-start p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+                  <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                    <span class="text-white text-sm font-bold">4</span>
+                  </div>
+                  <div>
+                    <h5 class="text-xl font-bold text-gray-900 mb-2">Валидация и согласование</h5>
+                    <p class="text-gray-600 text-sm mb-3">Проверка требований с заказчиком и всеми заинтересованными сторонами</p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded">Requirements Review</span>
+                      <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded">Sign-off Process</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: PRD Structure -->
+            <div>
+              <h4 class="text-3xl font-bold text-gray-900 mb-8">Структура PRD документа</h4>
+              <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                <div class="space-y-6">
+                  <div class="border-l-4 border-blue-500 pl-4">
+                    <h5 class="font-bold text-gray-900 mb-2">1. Executive Summary</h5>
+                    <p class="text-gray-600 text-sm">Краткое описание проекта, цели и ожидаемые результаты</p>
+                  </div>
+                  
+                  <div class="border-l-4 border-green-500 pl-4">
+                    <h5 class="font-bold text-gray-900 mb-2">2. Business Requirements</h5>
+                    <p class="text-gray-600 text-sm">Бизнес-цели, KPI, ROI, успех критерии</p>
+                  </div>
+                  
+                  <div class="border-l-4 border-purple-500 pl-4">
+                    <h5 class="font-bold text-gray-900 mb-2">3. User Requirements</h5>
+                    <p class="text-gray-600 text-sm">Пользовательские роли, сценарии, User Stories</p>
+                  </div>
+                  
+                  <div class="border-l-4 border-orange-500 pl-4">
+                    <h5 class="font-bold text-gray-900 mb-2">4. Functional Requirements</h5>
+                    <p class="text-gray-600 text-sm">Детальное описание функций и возможностей системы</p>
+                  </div>
+                  
+                  <div class="border-l-4 border-red-500 pl-4">
+                    <h5 class="font-bold text-gray-900 mb-2">5. Non-Functional Requirements</h5>
+                    <p class="text-gray-600 text-sm">Производительность, безопасность, масштабируемость</p>
+                  </div>
+                  
+                  <div class="border-l-4 border-yellow-500 pl-4">
+                    <h5 class="font-bold text-gray-900 mb-2">6. Technical Constraints</h5>
+                    <p class="text-gray-600 text-sm">Технические ограничения, интеграции, совместимость</p>
+                  </div>
+                  
+                  <div class="border-l-4 border-indigo-500 pl-4">
+                    <h5 class="font-bold text-gray-900 mb-2">7. Acceptance Criteria</h5>
+                    <p class="text-gray-600 text-sm">Критерии приемки, тестовые сценарии</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Requirements Analysis Methods -->
+          <div class="mb-16">
+            <h4 class="text-3xl font-bold text-gray-900 mb-8 text-center">Методы анализа требований</h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Method 1 -->
+              <div class="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  </svg>
+                </div>
+                <h5 class="text-lg font-bold text-gray-900 mb-3">Интервьюирование</h5>
+                <p class="text-gray-600 text-sm">Структурированные интервью с ключевыми стейкхолдерами</p>
+              </div>
+
+              <!-- Method 2 -->
+              <div class="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                  </svg>
+                </div>
+                <h5 class="text-lg font-bold text-gray-900 mb-3">Анкетирование</h5>
+                <p class="text-gray-600 text-sm">Опросы для сбора количественных данных от пользователей</p>
+              </div>
+
+              <!-- Method 3 -->
+              <div class="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                </div>
+                <h5 class="text-lg font-bold text-gray-900 mb-3">Наблюдение</h5>
+                <p class="text-gray-600 text-sm">Изучение текущих рабочих процессов в естественной среде</p>
+              </div>
+
+              <!-- Method 4 -->
+              <div class="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+                <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                  </svg>
+                </div>
+                <h5 class="text-lg font-bold text-gray-900 mb-3">Воркшопы</h5>
+                <p class="text-gray-600 text-sm">Коллективные сессии для выработки требований</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Requirements Categories -->
+          <div class="mb-16">
+            <h4 class="text-3xl font-bold text-gray-900 mb-8 text-center">Категории требований</h4>
+            <div class="grid lg:grid-cols-3 gap-8">
+              <!-- Functional -->
+              <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
+                <h5 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+                    <span class="text-white text-sm font-bold">F</span>
+                  </div>
+                  Функциональные
+                </h5>
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Бизнес-функции</div>
+                      <div class="text-sm text-gray-600">Что система должна делать</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Пользовательские сценарии</div>
+                      <div class="text-sm text-gray-600">Как пользователи взаимодействуют</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Интеграции</div>
+                      <div class="text-sm text-gray-600">Связи с внешними системами</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Non-Functional -->
+              <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8">
+                <h5 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                    <span class="text-white text-sm font-bold">N</span>
+                  </div>
+                  Нефункциональные
+                </h5>
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Производительность</div>
+                      <div class="text-sm text-gray-600">Скорость, нагрузка, отклик</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Безопасность</div>
+                      <div class="text-sm text-gray-600">Аутентификация, авторизация</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Масштабируемость</div>
+                      <div class="text-sm text-gray-600">Рост пользователей, данных</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technical -->
+              <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8">
+                <h5 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
+                    <span class="text-white text-sm font-bold">T</span>
+                  </div>
+                  Технические
+                </h5>
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Технологический стек</div>
+                      <div class="text-sm text-gray-600">Языки, фреймворки, СУБД</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Инфраструктура</div>
+                      <div class="text-sm text-gray-600">Облако, серверы, сети</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Ограничения</div>
+                      <div class="text-sm text-gray-600">Совместимость, стандарты</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deliverables -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <h4 class="text-2xl font-bold text-gray-900 mb-8 text-center">Результаты этапа анализа требований</h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="text-3xl mb-3">📋</div>
+                <h5 class="font-bold text-gray-900 mb-2">PRD документ</h5>
+                <p class="text-gray-600 text-sm">Полное техническое задание</p>
+              </div>
+              
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="text-3xl mb-3">🗺️</div>
+                <h5 class="font-bold text-gray-900 mb-2">User Journey Map</h5>
+                <p class="text-gray-600 text-sm">Карта пользовательских сценариев</p>
+              </div>
+              
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="text-3xl mb-3">🎯</div>
+                <h5 class="font-bold text-gray-900 mb-2">Acceptance Criteria</h5>
+                <p class="text-gray-600 text-sm">Критерии приемки функций</p>
+              </div>
+              
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="text-3xl mb-3">📊</div>
+                <h5 class="font-bold text-gray-900 mb-2">Estimation</h5>
+                <p class="text-gray-600 text-sm">Оценка времени и ресурсов</p>
+              </div>
             </div>
           </div>
         </div>
