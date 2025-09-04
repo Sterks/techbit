@@ -147,7 +147,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold text-gray-900 mb-2">Email</h3>
-                  <p class="text-gray-600 text-lg">info@techbit.ru</p>
+                  <p class="text-gray-600 text-lg">info@techbit.su</p>
                   <p class="text-gray-500 text-base">Ответим в течение 2-4 часов</p>
                 </div>
               </div>
