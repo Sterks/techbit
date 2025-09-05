@@ -187,6 +187,42 @@ export default defineEventHandler(async (event) => {
       transporter.sendMail(clientMailOptions)
     ])
 
+    // Отправка уведомления в Telegram (если настроен)
+    if (process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID && !isTestMode) {
+      try {
+        const telegramMessage = `
+🔔 *Новая заявка с сайта TechBit*
+
+👤 *Клиент:* ${name}
+📧 *Email:* ${email}
+${company ? `🏢 *Компания:* ${company}` : ''}
+🛠 *Услуга:* ${serviceName}
+
+💬 *Описание проекта:*
+${message}
+
+⏰ *Время:* ${new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })}
+        `.trim()
+
+        await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: process.env.TELEGRAM_CHAT_ID,
+            text: telegramMessage,
+            parse_mode: 'Markdown'
+          })
+        })
+
+        console.log('✅ Telegram уведомление отправлено')
+      } catch (telegramError) {
+        console.error('❌ Ошибка отправки в Telegram:', telegramError)
+        // Не прерываем выполнение, если Telegram недоступен
+      }
+    }
+
     if (isTestMode) {
       console.log('📧 Тестовые письма отправлены:')
       console.log('   Админу:', nodemailer.getTestMessageUrl(adminResult))
