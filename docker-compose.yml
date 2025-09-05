@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  # Nuxt приложение
+  app:
+    build: .
+    container_name: techbit-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    networks:
+      - techbit-network
+    volumes:
+      - ./uploads:/app/uploads  # Для загрузки файлов (если понадобится)
+    depends_on:
+      - nginx
+
+  # Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: techbit-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/sites-available:/etc/nginx/sites-available:ro
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/html
+    networks:
+      - techbit-network
+    depends_on:
+      - certbot
+
+  # Certbot для SSL сертификатов
+  certbot:
+    image: certbot/certbot
+    container_name: techbit-certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/html
+    command: certonly --webroot --webroot-path=/var/www/html --email admin@techbit.su --agree-tos --no-eff-email --staging -d techbit.su -d www.techbit.su
+    networks:
+      - techbit-network
+
+  # Cron для автообновления сертификатов
+  certbot-renewal:
+    image: certbot/certbot
+    container_name: techbit-certbot-renewal
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/html
+    command: sh -c "while :; do sleep 12h; certbot renew --quiet; done"
+    networks:
+      - techbit-network
+    depends_on:
+      - certbot
+
+volumes:
+  certbot-etc:
+  certbot-var:
+  web-root:
+
+networks:
+  techbit-network:
+    driver: bridge
