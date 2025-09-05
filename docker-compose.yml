@@ -6,16 +6,18 @@ services:
     build: .
     container_name: techbit-app
     restart: unless-stopped
+    ports:
+      - "3000:3000"  # Для тестирования без nginx
     environment:
       - NODE_ENV=production
+      - NITRO_HOST=0.0.0.0
+      - NITRO_PORT=3000
     env_file:
       - .env
     networks:
       - techbit-network
     volumes:
       - ./uploads:/app/uploads  # Для загрузки файлов (если понадобится)
-    depends_on:
-      - nginx
 
   # Nginx reverse proxy
   nginx:
@@ -34,7 +36,7 @@ services:
     networks:
       - techbit-network
     depends_on:
-      - certbot
+      - app
 
   # Certbot для SSL сертификатов
   certbot:

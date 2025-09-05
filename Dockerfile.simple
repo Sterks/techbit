@@ -1,0 +1,23 @@
+# Простая версия для тестирования
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Устанавливаем необходимые пакеты
+RUN apk add --no-cache python3 make g++
+
+# Копируем package.json
+COPY package*.json ./
+
+# Устанавливаем зависимости
+RUN npm ci
+
+# Копируем код
+COPY . .
+
+# Собираем
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "run", "start"]
