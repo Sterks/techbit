@@ -1,13 +1,9 @@
-version: '3.8'
-
 services:
   # Nuxt приложение
   app:
     image: sterks/techbit-site:latest
     container_name: techbit-app
     restart: unless-stopped
-    ports:
-      - "3000:3000"  # Для тестирования без nginx
     environment:
       - NODE_ENV=production
       - NITRO_HOST=0.0.0.0
@@ -30,13 +26,14 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/sites-available:/etc/nginx/sites-available:ro
+      - ./nginx/sites-enabled:/etc/nginx/sites-enabled:ro
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
       - web-root:/var/www/html
-    networks:
-      - techbit-network
     depends_on:
       - app
+    networks:
+      - techbit-network
 
   # Certbot для SSL сертификатов
   certbot:
@@ -46,11 +43,11 @@ services:
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
       - web-root:/var/www/html
-    command: certonly --webroot --webroot-path=/var/www/html --email admin@techbit.su --agree-tos --no-eff-email --staging -d techbit.su -d www.techbit.su
-    networks:
-      - techbit-network
+    command: certonly --webroot --webroot-path=/var/www/html --email your-email@example.com --agree-tos --no-eff-email --staging -d your-domain.com
+    depends_on:
+      - nginx
 
-  # Cron для автообновления сертификатов
+  # Автообновление сертификатов
   certbot-renewal:
     image: certbot/certbot
     container_name: techbit-certbot-renewal
@@ -58,11 +55,8 @@ services:
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
       - web-root:/var/www/html
-    command: sh -c "while :; do sleep 12h; certbot renew --quiet; done"
-    networks:
-      - techbit-network
-    depends_on:
-      - certbot
+    command: renew --webroot --webroot-path=/var/www/html
+    restart: unless-stopped
 
 volumes:
   certbot-etc:
