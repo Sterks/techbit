@@ -1,6 +1,27 @@
 #!/bin/bash
 
-# Скрипт для сборки и публикации образа в Docker Hub
+# =============================================================================
+# СБОРКА И ПУБЛИКАЦИЯ DOCKER ОБРАЗА TECHBIT
+# =============================================================================
+#
+# ИСПОЛЬЗОВАНИЕ:
+#   ./build-and-push.sh [версия]
+#   
+# ПРИМЕРЫ:
+#   ./build-and-push.sh          # Соберет версию "latest"
+#   ./build-and-push.sh v1.0.0   # Соберет версию "v1.0.0" и "latest"
+#
+# ЧТО ДЕЛАЕТ СКРИПТ:
+# - Проверяет авторизацию в Docker Hub
+# - Создает мультиархитектурный builder (AMD64 + ARM64)
+# - Собирает образ для обеих архитектур
+# - Публикует в Docker Hub: sterks/techbit-site
+#
+# ТРЕБОВАНИЯ:
+# - Docker с поддержкой buildx
+# - Авторизация в Docker Hub (docker login)
+#
+# =============================================================================
 
 set -e
 
@@ -54,12 +75,28 @@ else
 fi
 
 print_success "Образ успешно опубликован!"
-print_status "Доступные теги:"
+echo ""
+echo "=============================================================================
+DOCKER ОБРАЗ ГОТОВ К РАЗВЕРТЫВАНИЮ!
+============================================================================="
+print_status "Опубликованные теги:"
 echo "  - sterks/techbit-site:$VERSION"
 if [ "$VERSION" != "latest" ]; then
     echo "  - sterks/techbit-site:latest"
 fi
-
-print_warning "Для развертывания на сервере выполните:"
-echo "  docker pull sterks/techbit-site:latest"
-echo "  docker compose -f docker-compose.prod.yml up -d"
+echo ""
+echo "РАЗВЕРТЫВАНИЕ НА СЕРВЕРЕ:"
+echo "  1. Автоматическая установка (рекомендуется):"
+echo "     curl -sSL https://raw.githubusercontent.com/your-repo/setup.sh | bash"
+echo ""
+echo "  2. Ручная установка:"
+echo "     wget https://raw.githubusercontent.com/your-repo/setup.sh"
+echo "     chmod +x setup.sh && ./setup.sh"
+echo ""
+echo "ЛОКАЛЬНОЕ ТЕСТИРОВАНИЕ:"
+echo "  docker compose up -d"
+echo ""
+echo "ОБНОВЛЕНИЕ НА СЕРВЕРЕ:"
+echo "  ./setup.sh  # Запустите скрипт заново"
+echo ""
+echo "============================================================================="
