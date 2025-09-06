@@ -1,7 +1,12 @@
 services:
   # Nuxt приложение
   app:
+    # Для продакшена используем готовый образ
     image: sterks/techbit-site:latest
+    # Для локальной сборки на сервере раскомментируйте build и закомментируйте image:
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
     container_name: techbit-app
     restart: unless-stopped
     environment:

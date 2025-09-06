@@ -227,6 +227,7 @@ download_project_files() {
     # Список файлов для скачивания
     FILES=(
         "docker-compose.yml"
+        "Dockerfile"
         "nginx/nginx.conf"
         "nginx/Dockerfile"
         "nginx/sites-available/techbit.conf"
@@ -318,9 +319,27 @@ deploy_application() {
     # Создание необходимых директорий
     mkdir -p uploads nginx/sites-enabled
     
-    # Загрузка последнего образа
-    print_status "Загрузка образа приложения..."
-    docker pull sterks/techbit-site:latest
+    # Выбор режима развертывания
+    print_status "Выбор режима развертывания..."
+    echo "1. Использовать готовый образ из Docker Hub (быстро)"
+    echo "2. Собрать образ локально (медленно, но актуально)"
+    read -p "Выберите режим (1/2): " -n 1 -r
+    echo
+    
+    if [[ $REPLY == "2" ]]; then
+        print_status "Переключение на локальную сборку..."
+        # Переключаем docker-compose.yml на локальную сборку
+        sed -i 's|image: sterks/techbit-site:latest|# image: sterks/techbit-site:latest|' docker-compose.yml
+        sed -i 's|# build:|build:|' docker-compose.yml
+        sed -i 's|#   context: .|  context: .|' docker-compose.yml
+        sed -i 's|#   dockerfile: Dockerfile|  dockerfile: Dockerfile|' docker-compose.yml
+        
+        print_status "Сборка образа приложения..."
+        docker compose build app
+    else
+        print_status "Загрузка готового образа приложения..."
+        docker pull sterks/techbit-site:latest
+    fi
     
     # Запуск приложения и nginx
     print_status "Запуск приложения и nginx..."
