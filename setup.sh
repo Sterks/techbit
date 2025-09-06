@@ -250,10 +250,6 @@ download_project_files() {
         fi
     done
     
-    # Создание символической ссылки для HTTP конфигурации
-    mkdir -p nginx/sites-enabled
-    ln -sf ../sites-available/techbit-http.conf nginx/sites-enabled/default.conf
-    
     # Создание файла .env из встроенного шаблона
     create_env_file
     
@@ -317,7 +313,7 @@ deploy_application() {
     docker compose down --remove-orphans || true
     
     # Создание необходимых директорий
-    mkdir -p uploads nginx/sites-enabled
+    mkdir -p uploads
     
     # Выбор режима развертывания
     print_status "Выбор режима развертывания..."
@@ -371,9 +367,8 @@ setup_ssl_certificate() {
             
             # Переключение на HTTPS конфигурацию
             print_status "Переключение на HTTPS конфигурацию..."
-            rm -f nginx/sites-enabled/default.conf
-            ln -sf ../sites-available/techbit.conf nginx/sites-enabled/default.conf
-            docker compose build nginx
+            # Обновляем docker-compose.yml для использования HTTPS конфигурации
+            sed -i 's|techbit-http.conf:/etc/nginx/conf.d/default.conf|techbit.conf:/etc/nginx/conf.d/default.conf|' docker-compose.yml
             docker compose restart nginx
             
             # Запуск автообновления сертификатов
@@ -454,12 +449,12 @@ main() {
     echo "ОБНОВЛЕНИЕ ПРИЛОЖЕНИЯ:"
     echo "  ./setup.sh                     # Запустите этот скрипт заново"
     echo ""
-    echo "РУЧНАЯ НАСТРОЙКА SSL (если автоматически не получилось):"
-    echo "  1. Проверьте DNS:    nslookup techbit.su"
-    echo "  2. Проверьте HTTP:   curl -I http://techbit.su"
-    echo "  3. Получите SSL:     docker compose --profile ssl run --rm certbot"
-    echo "  4. Переключите HTTPS: cp nginx/sites-available/techbit.conf nginx/sites-enabled/default.conf"
-    echo "  5. Перезапустите:    docker compose build nginx && docker compose restart nginx"
+echo "РУЧНАЯ НАСТРОЙКА SSL (если автоматически не получилось):"
+echo "  1. Проверьте DNS:    nslookup techbit.su"
+echo "  2. Проверьте HTTP:   curl -I http://techbit.su"
+echo "  3. Получите SSL:     docker compose --profile ssl run --rm certbot"
+echo "  4. Переключите HTTPS: sed -i 's|techbit-http.conf|techbit.conf|' docker-compose.yml"
+echo "  5. Перезапустите:    docker compose restart nginx"
     echo ""
     echo "============================================================================="
 }
