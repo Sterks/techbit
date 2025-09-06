@@ -1,13 +1,9 @@
-version: '3.8'
-
 services:
   # Nuxt приложение
   app:
     image: sterks/techbit-site:latest
     container_name: techbit-app
     restart: unless-stopped
-    ports:
-      - "3000:3000"  # Для тестирования без nginx
     environment:
       - NODE_ENV=production
       - NITRO_HOST=0.0.0.0
@@ -17,7 +13,13 @@ services:
     networks:
       - techbit-network
     volumes:
-      - ./uploads:/app/uploads  # Для загрузки файлов (если понадобится)
+      - ./uploads:/app/uploads
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   # Nginx reverse proxy
   nginx:
@@ -30,15 +32,17 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/sites-available:/etc/nginx/sites-available:ro
+      - ./nginx/sites-enabled:/etc/nginx/sites-enabled:ro
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
       - web-root:/var/www/html
+    depends_on:
+      app:
+        condition: service_healthy
     networks:
       - techbit-network
-    depends_on:
-      - app
 
-  # Certbot для SSL сертификатов
+  # Certbot для получения SSL сертификатов (запускается вручную)
   certbot:
     image: certbot/certbot
     container_name: techbit-certbot
@@ -46,11 +50,13 @@ services:
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
       - web-root:/var/www/html
-    command: certonly --webroot --webroot-path=/var/www/html --email admin@techbit.su --agree-tos --no-eff-email --staging -d techbit.su -d www.techbit.su
+    command: certonly --webroot --webroot-path=/var/www/html --email runov.denis@yandex.ru --agree-tos --no-eff-email -d techbit.su -d www.techbit.su
     networks:
       - techbit-network
+    profiles:
+      - ssl
 
-  # Cron для автообновления сертификатов
+  # Автообновление SSL сертификатов
   certbot-renewal:
     image: certbot/certbot
     container_name: techbit-certbot-renewal
@@ -58,11 +64,13 @@ services:
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
       - web-root:/var/www/html
-    command: sh -c "while :; do sleep 12h; certbot renew --quiet; done"
+    command: sh -c "while :; do sleep 12h; certbot renew --quiet && nginx -s reload; done"
     networks:
       - techbit-network
+    profiles:
+      - ssl
     depends_on:
-      - certbot
+      - nginx
 
 volumes:
   certbot-etc:

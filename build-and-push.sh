@@ -63,4 +63,4 @@ fi
 
 print_warning "Для развертывания на сервере выполните:"
 echo "  docker pull sterks/techbit-site:latest"
-echo "  docker-compose -f docker-compose.prod.yml up -d"
+echo "  docker compose -f docker-compose.prod.yml up -d"

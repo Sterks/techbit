@@ -1,52 +1,64 @@
 # Многоступенчатая сборка для оптимизации размера образа
-
-# Стадия 1: Сборка приложения
 FROM node:20-alpine AS builder
 
-# Устанавливаем необходимые пакеты для сборки native модулей
+# Установка системных зависимостей для сборки
 RUN apk add --no-cache python3 make g++
 
+# Создание рабочей директории
 WORKDIR /app
 
-# Копируем файлы зависимостей
+# Копирование файлов зависимостей
 COPY package*.json ./
 
-# Устанавливаем все зависимости (включая dev для сборки)
-RUN npm ci
+# Установка всех зависимостей (включая dev для сборки)
+RUN npm ci --include=dev
 
-# Копируем исходный код
+# Копирование исходного кода
 COPY . .
 
-# Собираем приложение
+# Сборка приложения
 RUN npm run build
 
-# Стадия 2: Продакшен образ
+# Продакшн образ
 FROM node:20-alpine AS production
 
-WORKDIR /app
+# Установка curl для healthcheck
+RUN apk add --no-cache curl wget
 
-# Копируем только необходимые файлы из стадии сборки
-COPY --from=builder /app/.output ./.output
-COPY --from=builder /app/package*.json ./
-
-# Устанавливаем только продакшен зависимости
-RUN npm ci --omit=dev && npm cache clean --force
-
-# Создаем пользователя для безопасности
-RUN addgroup -g 1001 -S nodejs && \
+# Создание пользователя для безопасности
+RUN addgroup -g 1001 -S nuxt && \
     adduser -S nuxt -u 1001
 
-# Меняем владельца файлов
-RUN chown -R nuxt:nodejs /app
+# Создание рабочей директории
+WORKDIR /app
+
+# Копирование файлов зависимостей
+COPY package*.json ./
+
+# Установка только продакшн зависимостей
+RUN npm ci --omit=dev && npm cache clean --force
+
+# Копирование собранного приложения из builder
+COPY --from=builder --chown=nuxt:nuxt /app/.output ./.output
+COPY --from=builder --chown=nuxt:nuxt /app/public ./public
+
+# Создание директории для uploads
+RUN mkdir -p uploads && chown -R nuxt:nuxt uploads
+
+# Переключение на непривилегированного пользователя
 USER nuxt
 
-# Открываем порт 3000
-EXPOSE 3000
-
-# Устанавливаем переменные окружения
+# Настройка переменных окружения
 ENV NODE_ENV=production
 ENV NITRO_HOST=0.0.0.0
 ENV NITRO_PORT=3000
 
-# Запускаем приложение
+# Открытие порта
+EXPOSE 3000
+
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
+
+# Запуск приложения
 CMD ["node", ".output/server/index.mjs"]
