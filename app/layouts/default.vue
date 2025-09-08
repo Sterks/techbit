@@ -6,9 +6,13 @@
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <h1 class="text-2xl font-bold text-gray-900">
+              <button 
+                @click="goToHome" 
+                class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-200 cursor-pointer"
+                title="Перейти на главную страницу"
+              >
                 <span class="text-blue-600">Tech</span>Bit
-              </h1>
+              </button>
             </div>
           </div>
           <div class="hidden md:block">
@@ -42,9 +46,13 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div class="col-span-1 md:col-span-2">
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">
+            <button 
+              @click="goToHome" 
+              class="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-200 cursor-pointer mb-4"
+              title="Перейти на главную страницу"
+            >
               <span class="text-blue-600">Tech</span>Bit
-            </h3>
+            </button>
             <p class="text-gray-600 text-sm leading-relaxed max-w-md">
               Экспертные услуги в области автоматизации, DevOps, веб-разработки, Big Data и искусственного интеллекта. 
               Мы помогаем компаниям расти через инновационные технологии.
@@ -82,4 +90,18 @@
 <script setup>
 // Default layout для всех страниц
 const currentYear = new Date().getFullYear()
+
+// Функция для перехода на главную страницу и прокрутки вверх
+const goToHome = () => {
+  // Переходим на главную страницу
+  navigateTo('/')
+  
+  // Прокручиваем в самый верх страницы
+  nextTick(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  })
+}
 </script>
