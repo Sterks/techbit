@@ -1,5 +1,5 @@
-nj 'nj services:
-  # Nuxt приложение
+services:
+  # Nuxt приложение TechBit
   app:
     # Для продакшена используем готовый образ
     image: sterks/techbit-site:latest
@@ -26,6 +26,25 @@ nj 'nj services:
       retries: 3
       start_period: 40s
 
+  # Resume приложение
+  resume:
+    build:
+      context: ../resume
+      dockerfile: Dockerfile
+    container_name: techbit-resume
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    networks:
+      - techbit-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3001"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
   # Nginx reverse proxy
   nginx:
     build: 
@@ -45,6 +64,8 @@ nj 'nj services:
       - ./nginx/sites-available/techbit.conf:/etc/nginx/conf.d/techbit-https.conf:ro
     depends_on:
       app:
+        condition: service_healthy
+      resume:
         condition: service_healthy
     networks:
       - techbit-network
