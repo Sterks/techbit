@@ -345,6 +345,16 @@ deploy_application() {
     print_status "Ожидание запуска сервисов..."
     sleep 10
     
+    # Проверка синтаксиса Nginx
+    print_status "Проверка синтаксиса конфигурации Nginx..."
+    if docker compose exec -T nginx nginx -t 2>&1 | grep -q "syntax is ok"; then
+        print_success "Конфигурация Nginx корректна"
+    else
+        print_error "Ошибка в конфигурации Nginx!"
+        docker compose exec -T nginx nginx -t
+        return 1
+    fi
+    
     # Проверка статуса
     print_status "Проверка статуса контейнеров:"
     docker compose ps
@@ -353,9 +363,35 @@ deploy_application() {
 setup_ssl_certificate() {
     print_status "Настройка SSL сертификата..."
     
+    # Дополнительное ожидание для полного запуска
+    print_status "Ожидание полного запуска сервисов (30 секунд)..."
+    sleep 30
+    
+    # Проверка готовности приложения
+    print_status "Проверка готовности приложения..."
+    for i in {1..10}; do
+        if docker compose exec -T nginx wget -q -O- --timeout=3 http://app:3000 >/dev/null 2>&1; then
+            print_success "Приложение готово к работе"
+            break
+        fi
+        if [[ $i -eq 10 ]]; then
+            print_warning "Приложение еще не готово, продолжаем проверку..."
+        else
+            sleep 3
+        fi
+    done
+    
+    # Проверка логов на ошибки
+    print_status "Проверка логов на ошибки..."
+    if docker compose logs nginx 2>&1 | grep -i "error\|emerg\|crit" | head -5; then
+        print_warning "Обнаружены ошибки в логах Nginx (см. выше)"
+    fi
+    
     # Проверка доступности по HTTP
     print_status "Проверка доступности сайта по HTTP..."
-    if curl -s -o /dev/null -w "%{http_code}" http://localhost | grep -q "200"; then
+    HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -H "Host: techbit.su" http://localhost 2>/dev/null || echo "000")
+    
+    if [[ "$HTTP_CODE" == "200" ]] || [[ "$HTTP_CODE" == "301" ]] || [[ "$HTTP_CODE" == "302" ]]; then
         print_success "Сайт доступен по HTTP"
         
         # Попытка получения SSL сертификата
@@ -385,8 +421,27 @@ setup_ssl_certificate() {
             print_status "  docker compose build nginx && docker compose restart nginx"
         fi
     else
-        print_error "Сайт недоступен по HTTP!"
+        print_error "Сайт недоступен по HTTP! (HTTP код: $HTTP_CODE)"
+        print_status "Диагностика проблемы..."
+        
+        # Проверка статуса контейнеров
+        print_status "Статус контейнеров:"
+        docker compose ps
+        
+        # Проверка логов Nginx
+        print_status "Последние 20 строк логов Nginx:"
+        docker compose logs --tail=20 nginx
+        
+        # Проверка логов приложения
+        print_status "Последние 20 строк логов приложения:"
+        docker compose logs --tail=20 app
+        
+        # Проверка доступности приложения изнутри сети Docker
+        print_status "Проверка доступности приложения из контейнера Nginx:"
+        docker compose exec -T nginx wget -q -O- --timeout=5 http://app:3000 2>&1 | head -5 || print_warning "Не удалось подключиться к app:3000"
+        
         print_status "Проверьте логи: docker compose logs app nginx"
+        print_status "Проверьте конфигурацию: docker compose exec nginx nginx -t"
         return 1
     fi
 }
