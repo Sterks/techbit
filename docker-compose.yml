@@ -62,10 +62,11 @@ services:
       # Монтируем конфигурации для переключения между HTTP и HTTPS
       - ./nginx/sites-available/techbit-http.conf:/etc/nginx/conf.d/default.conf:ro
       - ./nginx/sites-available/techbit.conf:/etc/nginx/conf.d/techbit-https.conf:ro
+    extra_hosts:
+      # Для доступа к хосту из контейнера (нужно для проксирования на порт 3001)
+      - "host.docker.internal:host-gateway"
     depends_on:
       app:
-        condition: service_healthy
-      resume:
         condition: service_healthy
     networks:
       - techbit-network
